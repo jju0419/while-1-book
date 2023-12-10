@@ -1,0 +1,838 @@
+.mainbody1 * {
+  box-sizing: content-box !important;
+}
+#mainbody2_1 {
+	padding: 0px 10px;
+}
+em {
+	color: rgb(221, 0, 0);
+}
+
+
+/********** ��ܹ�� **********/
+#top_banner {
+	position:absolute; top:0; left:0; z-index:1;
+	width:100%;
+	background:#535554;
+	text-align:center;
+}
+#top_banner .btn {
+	position:absolute; top:16px; right:60px;
+	cursor:pointer;
+}
+#top_banner .btn24 {
+	position:absolute; top:53px; right:10px;
+	padding:5px 10px;
+	background:#000; color:#bbb;
+
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	-o-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+#top_banner .btn24 label { cursor:pointer;}
+#top_banner .btn24:hover { color:#fff;}
+ 
+
+#main_columnWrap {
+	position:relative; z-index:1;
+	width:100%;  
+	padding:0px 0 0px; 
+	margin:0 auto;
+	background:url(/img/common/main06.png)  repeat;
+}
+#main_columnWrap .main_column {
+	width:100%;  
+} 
+ 
+
+
+/********** ���� �Խô뿵�� **********/
+
+/* ������ �������� */
+#bannerWrap { 
+	width:100%;
+	max-width:1260px; 
+	margin:35px auto 25px;
+}
+#bannerWrap h3 {
+	margin-bottom:10px; 
+	font-size:1.25rem;   color:#333;
+	font-weight:bold;
+}
+
+#bannerWrap h4 {
+	margin-top:10px;
+	margin-bottom:5px; 
+	font-size:1.25rem;   color:#333;
+}
+
+ 
+/* ���� �������� ��ȭ��ȣ*/
+#bannerWrap .customer {
+	float:left;  
+}
+#bannerWrap .customer dl.tel {
+	min-height:52px;
+	padding-left:65px; 
+	padding-bottom:10px;
+	margin-top:5px;
+	background:url(/images/main/bg_subQuick01.png) no-repeat 10px 0;
+}
+#bannerWrap .customer dl.tel dt {
+	font-size:1.1rem; color:#888;
+}
+#bannerWrap .customer dl.tel dd {
+	font-size:1.2rem;  color:#333;  
+}
+#bannerWrap .customer dl.tel  .bold{
+    font-size:1.3rem;
+    color:#444;  
+}
+#bannerWrap .customer dl.tel  .small{
+	font-size:0.8rem; color:#333;
+}
+#bannerWrap .customer .bank {
+	float:left;  
+	background:url(/images/main/customer_line.gif) no-repeat left top;
+}
+#bannerWrap .customer .bank .img {
+	float:left; padding-top:5px;
+	margin:1px 0 0 1px;
+}
+#bannerWrap .customer .bank .info {
+	position:relative;  
+	padding-top: 5px;
+	margin-left: 100px;
+}
+#bannerWrap .customer .bank .info p {
+	position:relative;
+	padding-left:5px;
+	line-height:18px;
+}
+#bannerWrap .customer .bank .info p.small{
+	font-size:0.8rem;  color:#333;
+}
+#bannerWrap .customer .bank .info p span {
+	display:block;
+	position:absolute; top:0; left:0;
+}
+#bannerWrap .customer .bank .info p span.bank_name {
+	color:#333;
+}
+#bannerWrap .customer .bank .info  ol li {
+	height:20px;
+	margin-top:5px; padding-left:25px;
+	background:url(../images/main/bg_num.gif) no-repeat; 
+	font-size:1rem;   color:#888; 
+}
+#bannerWrap .customer .bank .info li.item01 { background-position:-0 -0;}
+#bannerWrap .customer .bank .info li.item02 { background-position:-0 -28px;}
+#bannerWrap .customer .bank .info li.item03 { background-position:-0 -56px;}
+#bannerWrap .customer .bank .info li.item04 { background-position:-0 -84px;}
+#bannerWrap .customer .bank .info li.item05 { background-position:-0 -112px;}
+
+
+
+
+/********** ��������**********/
+#bannerWrap .main_board {
+	float:left; width:100%;
+}
+ 
+.main_tab {
+	position:relative;  
+	width:470px; height:193px
+}
+.main_tab h3 a {
+	display:block;
+	width:118px; height:34px;
+	padding-top:5px;
+	border:1px solid #e3e3e3; background:#fff;  
+	color:#444; text-align:center; text-decoration:none; cursor:pointer;
+	font-size:0.9rem; 
+	font-weight:normal;
+}
+.main_tab .selected h3 a {
+	background-color:#2B67A5; /*�������� ���� ����*/
+	color:#fff;
+	width:118px; height:34px;
+	border:none;
+	font-size:0.9rem;  
+
+}
+.main_tab #tab4 h3 a { width:119px;}
+.main_tab #tab4.selected h3 a { width:119px;}
+
+.main_tab #tab2 h3,
+.main_tab #tab3 h3,
+.main_tab #tab4 h3 {
+	position:absolute; top:0;
+}
+.main_tab #tab2 h3 { left:117px;}
+.main_tab #tab3 h3 { left:234px;}
+.main_tab #tab4 h3 { left:351px;}
+
+.main_tab .tab div.list_1depth {
+	display:none; height:145px;
+	background:#fff;
+	border:1px solid #e3e3e3; border-top:none;
+	padding:1px 10px;
+}
+
+ 
+/* ���ο� �Խù� �ҷ����� */
+.latest_board li {
+	position:relative; 
+	border-top:1px solid #e3e3e3; 
+	font-size:0.9rem;    color:#888;
+}
+.latest_board li:first-child {
+	border-top:none;
+}
+.latest_board li a {
+	display:block;
+	padding-left:20px;
+	background:url(/images/main/bullet_board.gif) no-repeat 5px 9px;
+	
+	font-size:0.9rem;  color:#888;
+	text-overflow:ellipsis; overflow:hidden; white-space:nowrap;
+}
+.latest_board li span {
+	position:absolute; top:0; right:10px;
+}
+
+
+
+/* �Խô� �ٷΰ��� */
+#bannerWrap .quick {
+	float:left;  
+}
+#bannerWrap .quick p {
+	margin:10px 0 20px;
+	font-size:0.9em;  color:#888;
+}
+#bannerWrap .quick ul li {
+	float:left;
+	width:65px;
+	margin-left:20px;
+}
+#bannerWrap .quick ul li a {
+	display:block;
+	padding-top:80px;
+	color:#666; text-align:center;
+	font-size:0.9em;
+	line-height:110%;
+}
+#bannerWrap .quick ul li a:hover {
+	color:#000;
+}
+#bannerWrap .quick ul li:first-child { margin-left:0}
+
+#bannerWrap .quick ul li.item01 {background:url(/images/main/quick01.png) no-repeat center top}
+#bannerWrap .quick ul li.item02 {background:url(/images/main/quick02.png) no-repeat center top}
+#bannerWrap .quick ul li.item03 {background:url(/images/main/quick03.png) no-repeat center top}
+#bannerWrap .quick ul li.item04 {background:url(/images/main/quick04.png) no-repeat center top}
+#bannerWrap .quick ul li.item05 {background:url(/images/main/quick05.png) no-repeat center top}
+
+
+
+.btn_gray_move{
+  border-bottom:medium none;
+  border-left:medium none;
+  text-indent:-9999px;
+  width:29px;
+  background:url(/images/main/btn_gray_move.gif) no-repeat 0px 0px;
+  height:20px;
+  overflow:hidden;
+  border-top:medium none;
+  cursor:pointer;
+  border-right:medium none;
+
+}
+
+
+
+ 
+#wrap {
+	
+}
+#wrap > .custom-main-container {
+	margin: 0px auto; max-width: none;
+}
+#body {
+	margin: 0px auto; line-height: 1.333; position: relative; min-height: 0px;
+}
+#body > .custom-main-container {
+	margin: 0px auto; padding: 0px; position: relative; min-width: 300px;
+}
+#body [class*='mainwrap'] {
+	
+}
+#mainbody1 {
+	background: url("../images/main/mv_3.jpg") no-repeat 50% 50% rgb(255, 255, 255);
+}
+#mainbody1 > .custom-main-container {
+	margin: 0px auto; max-width: none;
+}
+#mainbody2 {
+	background: rgb(255, 255, 255); padding: 30px 0px 0px;
+}
+#banner1 {
+	margin: 0px auto; height: 520px; line-height: 1.333; letter-spacing: -1px; display: block; position: relative;
+}
+#banner1 > .wrap1 {
+	padding: 20px 0px; width: 100%; height: 480px; position: relative;
+}
+#banner1 .hg1 {
+	text-align: center; display: block;
+}
+#banner1 .hg1 > img {
+	width: 170px;
+}
+#banner1 .wrap1 {
+	
+}
+#banner1 .mView {
+	margin: auto; padding: 20px 0px 10px; width: 300px; height: 360px; overflow: hidden; position: relative; z-index: 0;
+}
+#banner1 .mCont {
+	list-style: none; margin: 0px; padding: 0px; transition:0.8s; left: 0px; top: 0px; width: 30000px; height: 100%; position: absolute;
+}
+#banner1 .mContC {
+	background: rgb(255, 255, 255); margin: 20px 10px 0px 0px; left: 0px; top: 0px; width: 290px; height: 360px; float: left; display: block; position: relative; box-shadow: 4px 4px 5px #333;
+}
+#banner1 .mContC.on {
+	display: block;
+}
+#banner1 .mContC > .wrap1 {
+	padding: 15px; border: 7px solid rgb(255, 255, 255); border-image: none; width: 246px; height: 316px; display: block;
+}
+#banner1 .mContC .status1 {
+	background: rgb(137, 137, 137); padding: 5px; width: 60px; text-align: center; color: rgb(255, 255, 255); font-size: 12px; display: block;
+}
+#banner1 .mContC .tit1 {
+	margin: 10px 0px 20px; padding: 0px; color: rgb(0, 0, 0); font-size: 1.64em; font-weight: normal;
+}
+#banner1 .mContC .condition1 {
+	margin: 0px 0px 15px;
+}
+#banner1 .mContC .condition1 li {
+	margin: 0px 0px 5px; width: 100%; color: rgb(0, 0, 0); overflow: hidden; font-size: 1.07em;
+}
+#banner1 .mContC .condition1 li > .t1 {
+	width: 30%; float: left; display: block;
+}
+#banner1 .mContC .condition1 li > .t1::before {
+	background: rgb(170, 170, 170); border-radius: 100%; width: 4px; height: 4px; margin-right: 3px; vertical-align: middle; display: inline-block; content: "";
+}
+#banner1 .mContC .condition1 li > .t2 {
+	width: 70%; letter-spacing: 0px; float: left; display: block;
+}
+#banner1 .mContC .condition2 {
+	padding-top: 15px; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: dotted;
+}
+#banner1 .mContC .condition2 li {
+	margin: 0px 0px 5px; width: 100%; color: rgb(0, 0, 0); overflow: hidden; font-size: 1.07em;
+}
+#banner1 .mContC .condition2 li > .t1 {
+	display: block;
+}
+#banner1 .mContC .condition2 li > .t1::before {
+	background: rgb(119, 119, 119); border-radius: 100%; width: 4px; height: 4px; margin-right: 3px; vertical-align: middle; display: inline-block; content: "";
+}
+#banner1 .mContC .condition2 li > .t2 {
+	padding: 0px 0px 0px 10px; letter-spacing: 0px; font-size: 14px; display: block; white-space: nowrap;
+}
+#banner1 .mContC.banner-ing > .wrap1 {
+
+}
+#banner1 .mContC.banner-on > .wrap1 {
+
+}
+#banner1 .mContC.banner-off > .wrap1 {
+
+}
+#banner1 .mContC.banner-ing .status1 {
+	background:  #0089CF;
+}
+#banner1 .mContC.banner-on .status1 {
+	background: #124EA2;
+}
+#banner1 .mContC .a1 {
+	display: none;
+}
+#banner1 .mContC.banner-on .a1 {
+	background: url("/images/main/banner1button1@2x.png") no-repeat 0% 0% / contain;
+	padding: 25px 0px 0px; 
+	border-radius: 100%; 
+	top: -20px; 
+	width: 82px; 
+	height: 59px; 
+	text-align: center; 
+	right: 15px; 
+	color: rgb(255, 255, 255); 
+	line-height: 120%; 
+	display: block; 
+	position: absolute;
+}
+
+#banner1 .mContC .a2 {
+	margin-top: 10px;  
+	right: 25px; 
+	border-radius: 2px;
+    border: 1px solid  #C15803;
+	padding: 5px 10px; 
+    transition: 0.2s ease-out;
+    border-image: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+	position: absolute;
+    box-sizing: border-box;
+    background-color: #F76F02;
+    -webkit-appearance: none;
+}
+#banner1 .mContC .a2:hover {  
+    color: white; 
+    background-color: #033985;  
+}
+
+#banner1 .menu {
+	
+}
+#banner1 .menu .m {
+	background: none; margin: 0px; padding: 0px; border-radius: 0px; border: 0px currentColor; border-image: none; width: 33px; height: 33px; line-height: 1; overflow: visible; vertical-align: middle; display: block; position: absolute; z-index: 2; cursor: pointer; box-sizing: border-box;
+}
+#banner1 .menu .m .ic1 {
+	background: no-repeat center / contain; margin: -16px; left: 50%; top: 50%; width: 33px; height: 33px; overflow: hidden; float: left; position: absolute;
+}
+#banner1 .mControl {
+	
+}
+#banner1 .mControl .m {
+	top: 250px;
+}
+#banner1 .mControl .play {
+	margin: 0px 0px 0px 110px; border-radius: 100%; border: 1px solid rgb(255, 255, 255); border-image: none; left: 50%; top: 467px; width: 30px; height: 30px;
+}
+#banner1 .mControl .play > .ic1 {
+  background: url("../images/main/pr1next1@2x.png") no-repeat; margin: -15px; width: 30px; height: 30px;
+  background-position: 50%;
+  background-size: contain;
+}
+#banner1 .mControl .stop {
+	margin: 0px 0px 0px 73px; border-radius: 100%; border: 1px solid rgb(255, 255, 255); border-image: none; left: 50%; top: 467px; width: 30px; height: 30px;
+}
+#banner1 .mControl .stop > .ic1 {
+  background: url("../images/main/pr1stop1@2x.png") no-repeat; margin: -15px; width: 30px; height: 30px;
+  background-position: 50%;
+  background-size: contain;
+}
+#banner1 .mControl .prev {
+	left: 0px;
+}
+#banner1 .mControl .next {
+	right: 0px;
+}
+#banner1 .mControl .prev > .ic1 {
+	background-image: url("/images/main/banner1prev1@2x.png");
+	background-size: contain; 
+}
+#banner1 .mControl .next > .ic1 {
+	background-image: url("/images/main/banner1next1@2x.png");
+	background-size: contain; 
+}
+#banner1 .mPageNum {
+	margin: 0px 0px 0px -150px; left: 50%; bottom: 30px; position: absolute; z-index: 1;
+}
+#banner1 .mPageNum .m {
+	background: rgb(255, 255, 255); margin: 0px 0px 0px 5px; border-radius: 9999px; width: 15px; height: 15px; overflow: hidden; display: inline-block; position: relative; box-shadow: inset 1px 2px 2px #555;
+}
+#banner1 .mPageNum .m.on {
+	width: 30px; height: 15px;
+}
+#process1 {
+	margin: 0px auto 20px; line-height: 1.333; letter-spacing: -1px; overflow: hidden; display: block; position: relative;
+}
+#process1 .hg1 {
+	margin: 0px 0px 10px; padding: 0px; color: rgb(0, 0, 0); font-size: 1.42em; font-weight: normal;
+}
+#process1 ul {
+	margin: 0px -1%; box-sizing: border-box;
+}
+#process1 li {
+	margin: 0px -0.25em 0px 0px; padding: 1%; width: 33.33%; vertical-align: top; display: inline-block; position: relative; box-sizing: border-box;
+}
+#process1 li > .ic1 {
+	background: no-repeat; margin: 0px auto; width: 47px; height: 47px; display: block;
+}
+#process1 li > .ic1::before {
+	background: url("../images/main/process1arrow1@2x.png") no-repeat 0% 0% / contain; left: 0px; top: 20px; width: 14px; height: 22px; display: block; position: absolute; content: "";
+	background-size: contain; 
+}
+#process1 li.m1 > .ic1::before {
+	display: none;
+}
+#process1 li > .t1 {
+	margin: 5px 0px 0px; text-align: center; display: block;
+}
+#process1 li.m1 > .ic1 {
+	background-image: url("../images/main/process1ic01@2x.png"); 
+	background-size: contain; 
+}
+#process1 li.m2 > .ic1 {
+	background-image: url("../images/main/process1ic02@2x.png");
+	background-size: contain; 
+}
+#process1 li.m3 > .ic1 {
+	background-image: url("../images/main/process1ic03@2x.png");
+	background-size: contain; 
+}
+#process1 li.m4 > .ic1 {
+	background-image: url("../images/main/process1ic04@2x.png");
+	background-size: contain; 
+}
+#process1 li.m5 > .ic1 {
+	background-image: url("../images/main/process1ic05@2x.png");
+	background-size: contain; 
+}
+#process1 li.m6 > .ic1 {
+	background-image: url("../images/main/process1ic06@2x.png");
+	background-size: contain; 
+}
+#bbs1 {
+	
+}
+#bbs2 {
+	
+}
+.list1 {
+	margin: 0px auto 20px; height: 150px; line-height: 1.333; letter-spacing: -1px; display: block; position: relative;
+}
+.list1 > .wrap1 {
+	overflow: hidden; display: block;
+}
+.list1 .tab a {
+	background: rgb(255, 255, 255); margin: 0px 0px 0px -1px; padding: 0px 10px; border: 1px solid rgb(221, 221, 221); border-image: none; height: 35px; color: rgb(119, 119, 119); line-height: 36px; font-size: 15px; font-weight: 500; float: left; display: block; position: relative; z-index: 1;
+}
+.list1 .tab.on a {
+	color: rgb(0, 0, 0);
+}
+.list1 .tab.on a::before {
+	left: 0px; top: 33px; width: 100%; right: 0px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: absolute; content: "";
+}
+.list1 .h1 + .tab > a {
+	margin: 0px;
+}
+.list1 .cont {
+	padding: 13px 0px 0px; left: 0px; top: 34px; width: 100%; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid; display: block; position: absolute; z-index: 0;
+}
+.list1 li > a {
+	padding: 0.16em 90px 0.16em 0px; height: 1.33em; color: rgb(85, 85, 85); line-height: 1.333; overflow: hidden; font-size: 13px; display: block; cursor: pointer;
+}
+.list1 li .t1 {
+	width: 100%; overflow: hidden; float: left; white-space: nowrap; position: relative; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+.list1 li .t2 {
+	
+}
+.list1 li .t3 {
+	margin: 0px -90px 0px 0px; padding: 0px 1px 0px 0px; width: 65px; text-align: right; color: rgb(149, 149, 149); font-size: 13px; float: right; display: block;
+}
+.list1 .new {
+	background: rgb(228, 75, 58); font: 10px/16px Helvetica, Arial, sans-serif; margin: 1px -24px 1px 8px; border-radius: 2px; width: 16px; height: 16px; color: rgb(255, 255, 255); text-transform: uppercase; text-indent: 4px; letter-spacing: 16px; overflow: hidden; vertical-align: middle; float: left; font-size-adjust: none; font-stretch: normal;
+}
+.list1 .more {
+	top: -35px; width: 20px; height: 20px; right: 0px; display: block; position: absolute;
+}
+.list1 .more > .ic1 {
+	background: url("../images/main/more@2x.png") no-repeat; width: 20px; height: 20px; display: block;
+	background-size: contain; 
+}
+#info1 {
+	margin: 0px auto 20px; line-height: 1.333; letter-spacing: -1px; display: block; position: relative;
+}
+#info1 .txt1 {
+	padding: 0px 10px; height: 47px; color: rgb(255, 255, 255); line-height: 47px; overflow: hidden; display: block;
+}
+#info1 .txt1.bank1 {
+	background: rgb(6, 64, 121);
+}
+#info1 .txt1.tell1 {
+	background: rgb(17, 49, 81);
+}
+#info1 .txt1 .t1 {
+	margin-right: 10px; display: inline-block;
+}
+#info1 .txt1 .t2 {
+	padding-left: 10px; 
+	/*display: inline-block; */
+	/*white-space: nowrap;*/ 
+	position: relative;
+}
+#info1 .txt1 .t2 b {
+	letter-spacing: 0px;
+	padding-left:5px;
+	color:white;
+}
+#info1 .txt1 .t2::before {
+	margin: 15px 0px 0px; left: 0px;  width: 0px; height: 15px; border-left-color: rgb(255, 255, 255); border-left-width: 1px; border-left-style: solid; display: inline-block; position: absolute; content: "";
+}
+#menu1 {
+	margin: 0px auto 20px; line-height: 1.333; letter-spacing: -1px; display: block; position: relative;
+}
+#menu1 ul li {
+	overflow: hidden;
+}
+#menu1 .a1 {
+	padding: 20px; color: rgb(255, 255, 255); display: block; position: relative;
+}
+#menu1 .m1 .a1 {
+	background: rgb(0, 137, 207);
+}
+#menu1 .m2 .a1 {
+	background: rgb(18, 78, 162);
+}
+#menu1 .a1 > .t1 {
+	margin: 20px 0px 10px; font-size: 1.46em; display: block;
+}
+#menu1 .a1 > .t2 {
+	display: block;
+}
+#menu1 .a1 > .ic1 {
+	background: no-repeat; width: 56px; height: 56px; right: 20px; bottom: 20px; display: block; position: absolute;
+}
+#menu1 .m1 .a1 > .ic1 {
+	background-image: url("../images/main/menu1ic01@2x.png");
+	background-size: contain; 
+}
+#menu1 .m2 .a1 > .ic1 {
+	background-image: url("../images/main/menu1ic02@2x.png");
+	background-size: contain; 
+}
+#pr1 {
+	background: rgb(255, 255, 255); margin: 0px auto 20px; line-height: 1.333; letter-spacing: -1px; display: block; position: relative;
+}
+#pr1 > .wrap1 {
+	overflow: hidden;
+}
+#pr1 .h1 {
+	margin: 8px 1em; padding: 0px; height: 22px; font-size: 16px; font-weight: bold; display: block;
+}
+#pr1 .mView {
+	padding: 0px 0px 43.47%; overflow: hidden; position: relative; z-index: 10;
+}
+#pr1 .mCont {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+#pr1 .mContC {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: block; position: absolute;
+}
+#pr1 .mContC.on {
+	display: block;
+}
+#pr1 .mContC > .a1 {
+	width: 100%; height: 100%; text-align: center; float: left; position: relative;
+}
+#pr1 .mContC .f1 {
+	width: 100%; height: 100%; overflow: hidden; display: block; position: relative;
+}
+#pr1 .mContC .f1p1 {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+#pr1 .mContC .f1 img {
+	left: 0px; top: 0px; width: 100%; height: auto; position: absolute; min-height: 100%;
+}
+#pr1 .mContC > .a1:focus {
+	border: 2px dotted rgb(0, 0, 0); border-image: none;
+}
+#pr1 .menu {
+	left: 10px; top: 10px; right: 10px; position: absolute; z-index: 20;
+}
+#pr1 .menu .m {
+	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; line-height: 1; vertical-align: middle; float: left; position: relative; cursor: pointer;
+}
+#pr1 .menu .m > .ic1 {
+	background: no-repeat center / contain; margin: -10px; left: 50%; top: 50%; width: 20px; height: 20px; text-indent: -9999px; overflow: hidden; float: left; position: absolute;
+}
+#pr1 .menu .mControl {
+	top: 0px; right: 0px; position: absolute;
+}
+#pr1 .menu .mControl .m {
+	background: rgb(0, 0, 0); margin: 0px 0px 0px 1px; border-radius: 0px; border: 0px currentColor; border-image: none; width: 30px; height: 30px; box-sizing: content-box;
+}
+#pr1 .menu .mControl .stop > .ic1 {
+	background-image: url("../images/main/pr1stop1@2x.png");
+	background-size: contain; 
+}
+#pr1 .menu .mControl .prev > .ic1 {
+	background-image: url("../images/main/pr1prev1@2x.png");
+	background-size: contain; 
+}
+#pr1 .menu .mControl .next > .ic1 {
+	background-image: url("../images/main/pr1next1@2x.png");
+	background-size: contain; 
+}
+#pr1 .menu .mPage {
+	top: 0px; right: 93px; display: table; position: absolute;
+}
+#pr1 .menu .mPage .text {
+	background: rgb(0, 0, 0); padding: 0px 0.66em; height: 30px; color: rgb(255, 255, 255); letter-spacing: 0px; font-size: 14px; vertical-align: middle; display: table-cell;
+}
+#pr1 .menu .mPage .text > * {
+	font-weight: normal;
+	color:white;
+}
+#pr1 .menu .mPage .text .on {
+	
+}
+#pr1 .menu .mPage .text .sep {
+	
+}
+#pr1 .menu .mPage .text .total {
+	
+} 
+
+@media all and (min-width:768px)
+{
+		#banner1 > .wrap1 {
+			margin: 0px auto; width: 748px;
+		}
+		#banner1 .mView {
+			width: 600px;
+		}
+		#banner1 .mPageNum {
+			margin-left: -40px;
+		}
+		#process1 li {
+			width: 16.66%;
+		}
+		#process1 li > .ic1 {
+			width: 94px; height: 94px;
+		}
+		#process1 li > .ic1::before {
+			top: 40px;
+		}
+		#bbs1 {
+			float: left;
+		}
+		#bbs2 {
+			float: right;
+		}
+		.list1 {
+			width: 49%;
+		}
+		#info1 {
+			width: 100%; overflow: hidden;
+		}
+		#info1 .txt1 {
+			padding: 0px 0px 0px 2%; width: 50%; float: left;
+		}
+		#menu1 {
+			width: 100%; overflow: hidden;
+		}
+		#menu1 ul li {
+			display: inline;
+		}
+		#menu1 .a1 {
+			padding: 3%; width: 50%; float: left;
+		}
+}
+@media all and (min-width:1256px)
+{
+		#mainbody2 > .custom-main-container {
+			padding: 0px; max-width: none;
+			width:1200px;
+      padding-right:0px;
+      margin: auto;
+		}
+		#mainbody2_1 {
+			width: 710px; float: left;
+		}
+		#mainbody2_2 {
+			width: 460px; float: right;
+		}
+		#banner1 {
+			height: 545px;
+		}
+		#banner1 .hg1 > img {
+			width: 250px;
+		}
+		#banner1 > .wrap1 {
+			margin: 0px auto; padding: 30px 0px; width: 1000px; height: 485px;
+		}
+		#banner1 .mView {
+			width: 930px; padding-top: 30px;
+		}
+		#banner1 .mContC {
+			margin: 30px 10px 0px;
+		}
+		#banner1 :last-child.mContC {
+			
+		}
+		#banner1 .mControl .prev {
+			width: 66px; height: 66px; margin-left: -50px;
+		}
+		#banner1 .mControl .next {
+			width: 66px; height: 66px; margin-right: -50px;
+		}
+		#banner1 .menu .prev .ic1 {
+			margin: -33px; width: 66px; height: 66px;
+		}
+		#banner1 .menu .next .ic1 {
+			margin: -33px; width: 66px; height: 66px;
+		}
+		#banner1 .mControl .stop {
+			top: 490px;
+		}
+		#banner1 .mControl .play {
+			top: 490px;
+		}
+		#process1 li > .t1 {
+			font-size: 13px;
+		}
+		#process1 li > .ic1::before {
+			left: -6px;
+		}
+		.list1 {
+			width: 345px;
+		}
+		#info1 {
+			background: url("../images/main/info1bg1.png") no-repeat;	 
+
+		}
+		#info1 .txt1.bank1 {
+			background: none;  
+		}
+		#info1 .txt1.tell1 { 
+			background: none;  
+		}
+		#info1 .txt1 b {
+			letter-spacing: 0px;
+		}
+		#menu1 .a1 {
+			padding: 30px 20px 86px; width: 230px;
+		} 
+}
+
+
+
+.init * {
+	list-style: none;
+	/* margin: 0px; */
+	/* padding: 0px; */
+	text-decoration: none !important;
+	max-width: none;
+}
+.blind {
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  line-height: 0;
+  overflow: hidden;
+  font-size: 0px;
+  position: absolute !important;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>게시대 현황 및 위치</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/css/layout.css?version=1.1" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="js-include-header" th:replace="/html/header :: header"></div>
+<div id="js-include-gnb" th:replace="/html/gnb :: gnb"></div>
+<div id="js-include-tb" th:replace="/html/tb :: tb"></div>
+  <div class="container m-auto row m-0 min-vh-75">
+    <div id="js-include-snb" th:replace="/html/snb :: snb"></div>
+    <div id="content" class="body-container pl-0 pr-0 pt-4 pt-lg-5 pb-2 pb-lg-5 pl-lg-5 pr-lg-3">
+      <!-- Content Start -->
+      <div>
+
+<!--  검색 실험    -->
+
+        <!--   검색 실험    -->
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>상품명</th>
+            <th>저자</th>
+            <th>가격</th>
+            <th>출판사</th>
+            <th>책 상태</th>
+            <th>대학 명</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="item : ${items}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.author}"></td>
+            <td th:text="${item.price}"></td>
+            <td th:text="${item.isbn}"></td>
+            <td th:text="${item.quality}"></td>
+            <td th:text="${item.uni}"></td>
+<!--            나중에 ID값 매핑해서 등록자만 수정가능하도록-->
+            <td>
+              <a href="#" th:href="@{/items/{id}/edit (id=${item.id})}"
+                 class="btn btn-primary" role="button">수정</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+
+        <div id="row1" style="float:left;">
+          <form class="searchForm" th:action="@{/items}" th:object="${keyword}" method="get" >
+            <input type="text" name="title" class="formcontrol" th:value="${title}" placeholder="제목을 입력하세요">
+            <input type="text" name="uni" class="formcontrol" th:value="${uni}"  placeholder="학교를 입력하세요">
+            <button type="submit" class="btn btn-primary">검색</button>
+          </form>
+        </div>
+
+      </div>
+      <!-- Content End -->
+    </div>
+  </div>
+<div id="js-include-wing" th:replace="/html/wing :: wing"></div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>경주시광고협회 홈페이지를 찾아주셔서 감사합니다.</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta charset="utf-8" />
+  <meta http-ｅquiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/layout.css?version=1.1" rel="stylesheet" type="text/css" />
+	  <link href="/css/main.css?version=1.1" rel="stylesheet" type="text/css" />
+		
+		<!--[if !IE]>-->
+		<script src="/js/hammer.min.js"></script>
+		<!--<![endif]--> 
+		<script src="/js/iscroll-min.js"></script>
+		<script src="/js/jquery-1.12.4.min.js"></script>
+		<script src="/js/jquery.easing.1.3.js"></script>
+		<!--[if lt IE 9]>
+		<![endif]-->
+		<!-- Do not edit! -->
+		<script src="/js/script_base.js"></script>
+		<script src="/js/script_gesture1.js"></script>
+		<script src="/js/script_swipe1.js"></script>
+		<script src="/js/script_scroll1section1.js"></script>
+		<!-- /Do not edit! -->
+		<script src="/js/script.js"></script><!-- 실행호출 -->
+  </head>
+
+  <body>
+      <div id="js-include-header" th:replace="html/header :: header"></div>
+      <div id="js-include-gnb" th:replace="html/gnb :: gnb"></div>
+
+<!-- #container -->
+<div id="container">
+
+
+	<!-- #wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div class="custom-main-container clearfix">
+			<!-- #body -->
+			<div id="body" class="init">
+				<!-- custom-main-container -->
+				<div class="custom-main-container clearfix">  
+
+					<!-- mainbody1 -->
+					<div class="mainbody1" id="mainbody1">
+						<!-- custom-main-container -->
+						<div class="custom-main-container clearfix"> 
+
+							<div id="banner1">
+								<div class="wrap1">
+									<h3 class="hg1"><img src="/images/main/banner1tit1@2x.png"   /></h3>
+									
+									<!--  menu  -->
+									<div class="menu">
+										<div class="mControl">
+											<button type="button" class="m play"><i class="ic1 bsContain"></i> <span class="blind"></span></button>
+											<button type="button" class="m stop"><i class="ic1 bsContain"></i> <span class="blind"></span></button>
+											<button type="button" class="m prev"><i class="ic1 bsContain"></i> <span class="blind"></span></button>
+											<button type="button" class="m next"><i class="ic1 bsContain"></i> <span class="blind"></span></button>
+										</div>
+										<div class="mPageNum">
+											<a href="#?" class="m m1 on" title="1쪽 보기"><i class="ic1 bsContain"></i> <span class="t1 blind">1</span></a>
+											<a href="#?" class="m m2" title="2쪽 보기"><i class="ic1 bsContain"></i> <span class="t1 blind">2</span></a>
+										</div>
+									</div>
+									<!--  /menu  -->
+
+									<!-- mView -->
+									<div class="mView">
+										<ul class="mCont">
+											<!-- 지정게시대 게시중 .banner-ing -->
+											<li class="mContC banner-ing">
+												<div class="wrap1">
+													<div class="status1">미배정접수</div>
+													<h4 class="tit1">7월 게시분</h4>
+													<div class="condition1">
+														<ul class="bu"> 
+															<li><span class="t1">추첨신청</span><span class="t2"><em>2019-06-01 ~ 06-04</em></span></li>
+															<li><span class="t1">추첨일</span><span class="t2">2019-06-05 11:00</span></li>
+															<li><span class="t1">입금일</span><span class="t2">당첨 당일 입금</span></li>
+														</ul>
+													</div>
+													<div class="condition2">
+														<ul class="bu">
+															<li><span class="t1">미배정게시대 신청기간</span><span class="t2">2019-06-07 10:00~ </span></li>
+															<li><span class="t1">미배정게시대 입금일</span><span class="t2">당일 입금</span></li>
+														</ul>
+													</div>
+													<A class="a2" href="<%=sDepPro03_02%>">미배정 신청하기</A>
+												</div>
+											</li>
+											<!-- /지정게시대 게시중 .banner-ing -->
+											<!-- 지정게시대 게시중 .banner-ing -->
+											<li class="mContC banner-on">
+												<div class="wrap1">
+													<div class="status1">추첨신청</div>
+													<h4 class="tit1">8월 게시분</h4>
+													<div class="condition1">
+														<ul class="bu"> 
+															<li><span class="t1">추첨신청</span><span class="t2"><em>2019-07-01 ~  07-04</em></span></li>
+															<li><span class="t1">추첨일</span><span class="t2">2019-07-05 11:00</span></li>
+															<li><span class="t1">입금일</span><span class="t2">당첨 당일 입금</span></li>
+														</ul>
+													</div>
+													<div class="condition2">
+														<ul class="bu">
+															<li><span class="t1">미배정게시대 신청기간</span><span class="t2">2019-07-08 10:00~ </span></li>
+															<li><span class="t1">미배정게시대 입금일</span><span class="t2">당일 입금</span></li>
+														</ul>
+													</div>
+													<A class="a2" href="<%=sDepPro03_01%>">추첨신청하기</A>
+												</div>
+											</li>
+											<!-- /지정게시대 게시중 .banner-ing -->
+											<!-- 지정게시대 게시중 .banner-ing -->
+											<li class="mContC banner-off">
+												<div class="wrap1">
+													<div class="status1">신청예정</div>
+													<h4 class="tit1">9월 게시분</h4>
+													<div class="condition1">
+														<ul class="bu"> 
+															<li><span class="t1">추첨신청</span><span class="t2"><em>2019-08-01 ~  08-04</em></span></li>
+															<li><span class="t1">추첨일</span><span class="t2">2019-08-05 11:00</span></li>
+															<li><span class="t1">입금일</span><span class="t2">당첨 당일 입금</span></li>
+														</ul>
+													</div>
+													<div class="condition2">
+														<ul class="bu">
+															<li><span class="t1">미배정게시대 신청기간</span><span class="t2">2019-08-06 10:00~ </span></li>
+															<li><span class="t1">미배정게시대 입금일</span><span class="t2">당일 입금</span></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<!-- /지정게시대 게시중 .banner-ing --> 
+
+										</ul>
+									</div>
+									<!-- /mView -->
+								</div>
+							</div>
+							<script type="text/javascript">/*<![CDATA[*/
+								$('#banner1').jQmPrevNext3({interval: 6000, gesture: false});
+							/*]]>*/</script>
+
+						</div>
+						<!-- /custom-main-container -->
+					</div>
+					<!-- /mainbody1 --> 
+
+					<!-- mainbody2 -->
+					<div class="mainbody2" id="mainbody2">
+						<!-- custom-main-container -->
+						<div class="custom-main-container clearfix">
+
+							<div id="mainbody2_1">
+
+								<div id="process1">
+									<h3 class="hg1">중고 거래 절차</h3>
+									<ul>
+										<li class="m1">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">회원가입 및 <span class="dpib">로그인</span></span>
+										</li>
+										<li class="m2">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">상품 <span class="dpib">등록</span></span>
+										</li>
+										<li class="m3">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">상품 <span class="dpib">검색</span></span>
+										</li>
+										<li class="m4">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">상품 <span class="dpib">주문</span></span>
+										</li>
+										<li class="m5">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">주문 <span class="dpib">확정</span></span>
+										</li>
+										<li class="m6">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">입금 및 <span class="dpib">결제 확인</span></span>
+										</li>
+									</ul>
+								</div>
+
+								<div id="bbs1" class="list1">
+								<div class="wrap1">
+									<h3 class="h1 blind">최근 게시글</h3>
+									<h4 class="tab"><a href="<%=sDepPro04_01%>">공지사항</a></h4>
+									<div id="bbs1c1" class="cont">
+									<ul>
+										<li><a href="<%=sDepPro04_01%>"><span class="t1">지정게시대 신설 및 폐지 등 변경사항 알림</span>  <small class="t3" title="작성일">2019.07.13</small></a></li>
+										<li><a href="<%=sDepPro04_01%>"><span class="t1">옥외광고물 제작시공 설명서 개편하였습니다.</span>  <small class="t3" title="작성일">2019.07.10</small></a></li>
+									</ul>
+									<a href="<%=sDepPro04_01%>" class="more"><i class="ic1 bsContain"></i><span class="blind">공지사항 더보기</span></a>
+									</div>
+								</div>
+								</div>
+
+
+
+
+								<script type="text/javascript">/*<![CDATA[*/
+									$(function(){ // 20170714.
+										jQtabCont2('click', '#bbs2', '.tab', 1, '.cont');
+									});
+								/*]]>*/</script>
+
+
+
+							</div>
+
+							<div id="mainbody2_2">
+
+								<div id="menu1">
+								<div class="wrap1">
+									<ul>
+										<li class="m1">
+										<a href="<%=sDepPro02_01%>" class="a1">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">상품 등록</span>
+											<span class="t2">거래하고 싶은 상품을 <br /> 등록해보세요!</span>
+										</a>
+										</li>
+										<li class="m2">
+										<a href="<%=sDepPro01_01%>" class="a1">
+											<i class="ic1 bsContain"></i>
+											<span class="t1">상품 검색</span>
+											<span class="t2">주문하고 싶은 상품을  <br />검색해 보세요!</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+								</div>
+
+
+
+
+								<script type="text/javascript">/*<![CDATA[*/
+									$(function(){ // 20160330.
+										$('#pr1').jQmPR1({interval:6000, mTabindex:'-1'}); 
+									});
+								/*]]>*/</script>
+
+							</div>
+							<div id="info1">
+								<div class="txt1 bank1">
+									<span class="t1">문의처</span>
+									<span class="t2">개발 <b>010-8734-3103</b> </span>
+								</div>
+							</div>
+						</div>
+						<!-- /custom-main-container -->
+					</div>
+					<!-- /mainbody3 --> 
+
+				</div>
+				<!-- /custom-main-container -->
+			</div>
+			<!-- /#body -->
+		</div>
+		<!-- /custom-main-container -->
+	</div>
+	<!-- /#wrap -->
+
+</div>
+<div id="js-include-wing" th:replace="html/wing :: wing"></div>
+<script
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"
+></script>
+<script src="/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<!--<script src="/js/custom.js"></script>-->
+</body>
+</html>
+
+

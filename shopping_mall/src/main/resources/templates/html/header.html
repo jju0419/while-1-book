@@ -1,0 +1,94 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header" id="header">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/layout.css?version=1.1" rel="stylesheet" type="text/css" />
+  <link href="/css/main.css?version=1.1" rel="stylesheet" type="text/css" />
+
+  <div class="bg-white position-relative">
+    <div class="container">
+      <div class="btn-menu-wrap d-block d-lg-none">
+        <button type="button"></button>
+      </div>
+      <a href="/" class="logo">
+        <img src="/images/logo/logo.png" alt="logo" />
+      </a>
+      <ul class="hd-list divider d-none d-lg-block">
+        <li><a href="/">HOME</a></li>
+<!--        <c:choose>-->
+<!--          <c:when test="${sessionScope.userId == null}">-->
+<!--            <a href="${path}/member/login.do">로그인</a>-->
+<!--          </c:when>-->
+<!--          <c:otherwise>-->
+<!--            ${sessionScope.userName}님이 로그인중입니다.-->
+<!--            <a href="${path}/member/logout.do">로그아웃</a>-->
+<!--          </c:otherwise>-->
+<!--        </c:choose>-->
+        <li th:if="${session.userId eq null}"><a href="/members/login">로그인</a></li>
+        <li th:unless="${session.userId eq null}"><b th:text="${session.userName}">000</b> 님 로그인</li>
+      </ul>
+      <div class="hd-mobile-list d-block d-lg-none">
+        <a href="#" class="text-center d-block" style="width: 40px; margin-bottom: -4px;">
+          <!--
+            <img class="d-block m-auto" src="../images/ico/login.gif">
+            <p class="mt-1" style="font-size: 0.5rem">로그인</p>
+          -->
+          <img class="d-block m-auto" src="/images/ico/logout.gif">
+          <p href="#" class="mt-1" style="font-size: 0.5rem">로그아웃</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu d-none row m-0">
+    <ul>
+      <li class="active">
+        <a href="#">회원 기능</a>
+        <ul>
+          <li><a href="/members/new">회원 가입</a></li>
+          <li> <a  href="/members">회원 목록</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">상품 기능</a>
+        <ul>
+          <li><a  href="/items/new">상품 등록</a></li>
+          <li> <a  href="/items">상품 목록</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">주문 기능</a>
+        <ul>
+          <li><a  href="/order">상품 주문</a></li>
+          <li><a  href="/orders">주문 내역</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">커뮤니티</a>
+        <ul>
+          <li><a href="/new/html/community-01.html">공지사항</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">마이페이지</a>
+        <ul>
+          <li><a href="/new/html/mypage-01.html">회원 정보</a></li>
+          <li><a href="/new/html/mypage-01.html">회원 탈퇴</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('#header .btn-menu-wrap button').on('click', function(){
+        $('#header').toggleClass('mobile-menu-active');
+      });
+      $('#header .mobile-menu > ul > li').on('click', function(){
+        $('#header .mobile-menu > ul > li.active').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+</div>
+</html>

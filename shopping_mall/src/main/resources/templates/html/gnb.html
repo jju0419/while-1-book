@@ -1,0 +1,58 @@
+<div id="gnb" th:fragment="gnb" class="d-none d-lg-block position-relative">
+  <div class="container">
+    <div class="gnb-main d-flex w-100">
+      <ul class="d-flex main-item">
+        <li><a>회원 기능</a></li>
+        <li><a>상품 기능</a></li>
+        <li><a>주문 기능</a></li>
+        <li><a>커뮤니티</a></li>
+        <li th:unless="${session.userId eq null}"><a>마이페이지</a></li>
+      </ul>
+      <div class="gnb-sub">
+        <div class="container">
+          <div class="d-flex w-100">
+            <ul>
+              <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/new/html/introduction-01.html">회원 기능</a></li>
+              <li><a href="/members/new">회원 가입</a></li>
+              <li> <a  href="/members">회원 목록</a></li>
+            </ul>
+            <ul>
+              <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/items">상품 기능</a>
+              </li>
+              <li><a  href="/items/new">상품 등록</a></li>
+              <li> <a  href="/items">상품 목록</a></li>
+              <li><a  href="/registItems">등록 관리</a></li>
+            </ul>
+            <ul>
+              <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/new/html/posting-apply-01.html">주문 기능</a>
+              </li>
+<!--              <li><a  href="/order">상품 주문</a></li>-->
+              <li><a  href="/orders">주문 내역</a></li>
+            </ul>
+            <ul>
+              <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/new/html/community-01.html">커뮤니티</a></li>
+              <li><a href="/new/html/community-01.html">공지사항</a></li>
+            </ul>
+            <ul th:unless="${session.userId eq null}">
+              <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/new/html/mypage-01.html">마이페이지</a></li>
+              <li><a href="/new/html/mypage-01.html">회원 정보</a></li>
+              <li><a href="/members/logout" style="color: red">로그 아웃</a></li>
+            </ul>
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <button type="button"></button>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('#gnb .menu button').on('click', function(){
+        $('#gnb').toggleClass('global-menu-active');
+      });
+    });
+  </script>
+</div>
+

@@ -1,0 +1,31 @@
+<div id="tb" th:fragment="tb">
+  <div class="container">
+    <div class="tb-nav d-block d-sm-inline-block text-left">
+      <a href="/static" class="home"></a>
+    </div>
+    <ul class="tb-option text-right float-sm-right float-none">
+      <li><a href="#?" class="print" onclick="window.print(); return false;"></a></li>
+      <li>
+        <button class="font-minus active"></button>
+        <button class="font-plus"></button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('.font-plus').on('click', function(){
+    $('.font-minus').removeClass('active');
+    $(this).addClass('active');
+		 $('#content').css('fontSize','1.4em');
+		return false;
+	});
+	$('.font-minus').on('click', function(){
+    $('.font-plus').removeClass('active');
+		$(this).addClass('active');
+		 $('#content').css('fontSize','1em');
+		return false;
+	});
+});
+</script>

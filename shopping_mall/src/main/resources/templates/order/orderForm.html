@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>게시대 현황 및 위치</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <meta http-ｅquiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/layout.css?version=1.1" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="js-include-header" th:replace="/html/header :: header"></div>
+<div id="js-include-gnb" th:replace="/html/gnb :: gnb"></div>
+<div id="js-include-tb" th:replace="/html/tb :: tb"></div>
+<div class="container m-auto row m-0 min-vh-75">
+    <div id="js-include-snb" th:replace="/html/snb :: snb"></div>
+    <div id="content" class="body-container pl-0 pr-0 pt-4 pt-lg-5 pb-2 pb-lg-5 pl-lg-5 pr-lg-3">
+    <form role="form" action="/order" method="post">
+        <div class="form-group">
+            <label for="member">주문회원</label>
+            <select name="memberId" id="member" class="form-control">
+                <option value="">회원선택</option>
+                <option th:each="member : ${members}"
+                        th:value="${member.id}"
+                        th:text="${member.name}" />
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item">상품명</label>
+            <select name="itemId" id="item" class="form-control">
+                <option value="">상품선택</option>
+                <option th:each="item : ${items}"
+                        th:value="${item.id}"
+                        th:text="${item.name}" />
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="count">주문수량</label>
+            <input type="number" name="count" class="form-control" id="count"
+                   placeholder="주문 수량을 입력하세요">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br/>
+    </div>
+</div>
+<div id="js-include-wing" th:replace="/html/wing :: wing"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+
+</html>
