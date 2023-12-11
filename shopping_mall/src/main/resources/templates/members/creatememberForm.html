@@ -26,6 +26,9 @@
     <div id="content" class="body-container pl-0 pr-0 pt-4 pt-lg-5 pb-2 pb-lg-5 pl-lg-5 pr-lg-3">
     <!--th:object="${memberForm}" Form안에서 이객체를 사용한다는 뜻 model로 받아온 객체-->
     <form role="form" action="/members/new" th:object="${memberForm}" method="post">
+        <p class="h2">
+            회원 가입
+        </p>
         <div class="form-group">
             <label th:for="name">이름</label>
             <!-- th:field="*{name}" id name을 같이 맞춰줌-->

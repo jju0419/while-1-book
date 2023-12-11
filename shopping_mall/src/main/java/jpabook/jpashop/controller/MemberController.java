@@ -2,6 +2,7 @@ package jpabook.jpashop.controller;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
+import jpabook.jpashop.Dto.MemberForm;
 import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.service.MemberService;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -44,6 +44,7 @@ public class MemberController {
         member.setEmail(form.getEmail());
         member.setPassword(form.getPassword());
         member.setUser_id(form.getUser_id());
+        member.setRoles("USER");
 
         memberService.join(member);
 
@@ -72,7 +73,8 @@ public class MemberController {
         boolean result = memberService.loginCheck(userForm, session);
         if (result) { // 로그인 성공
             Member member = memberService.viewMember(userForm);
-            session.setAttribute("userId", member.getId());
+            session.setAttribute("id", member.getId());
+            session.setAttribute("userId", member.getUser_id());
             session.setAttribute("userName", member.getName());
             // main.jsp로 이동
             model.addAttribute("msg", "success");
@@ -87,7 +89,7 @@ public class MemberController {
 
     // 03. 로그아웃 처리
     @GetMapping ("/members/logout")
-    public String logout(Model model, HttpSession session){
+    public String logout(HttpSession session){
         memberService.logout(session);
         return "redirect:/";
     }

@@ -3,7 +3,6 @@ package jpabook.jpashop.repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.TypedQuery;
 import jakarta.servlet.http.HttpSession;
 import jpabook.jpashop.domain.Member;
 import org.springframework.stereotype.Repository;
@@ -69,5 +68,16 @@ public class MemberRepository {
     }
     // 02. 회원 로그아웃
     public void logout(HttpSession session) {
+    }
+
+    public  List<Member> findByUserid(String userId) {
+        return em.createQuery("select user_id from Member m where m.user_id = :user_id", Member.class)
+                .setParameter("user_id", userId)
+                .getResultList();
+    }
+    public  Member findOneByUserid(String userId) {
+        return em.createQuery("select m from Member m where m.user_id = :user_id", Member.class)
+                .setParameter("user_id", userId)
+                .getSingleResult();
     }
 }

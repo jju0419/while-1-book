@@ -3,9 +3,7 @@ package jpabook.jpashop.service;
 import jakarta.servlet.http.HttpSession;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.repository.MemberRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,7 +34,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         //EXCEPION
         //멀티 스레드의 경우 문제가 될수 있음으로 DB멤버 네임을 유니크 제약 조건으로 잡는게 정답이다
-        List<Member> findMemmbers = memberRepository.findByName(member.getName());
+        List<Member> findMemmbers = memberRepository.findByUserid(member.getUser_id());
         if(!findMemmbers.isEmpty()){
             throw  new IllegalStateException("이미 존재하는 회원입니다.");
         }
@@ -51,8 +49,8 @@ public class MemberService {
 
 
     @Transactional(readOnly = true)
-    public  Member findOne(Long memberid){
-        return  memberRepository.findOne(memberid);
+    public Member findOne(String userId){
+        return memberRepository.findOneByUserid(userId);
     }
 
 

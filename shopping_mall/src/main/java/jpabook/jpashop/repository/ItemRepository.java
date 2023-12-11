@@ -1,13 +1,12 @@
 package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
-import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -53,4 +52,16 @@ public class ItemRepository  {
 
 
 
+
+    public Optional<Item> findById(Long itemId) {
+        return Optional.ofNullable(em.createQuery("select i from Item i where i.id = :item_id", Item.class)
+                .setParameter("item_id", itemId)
+                .getSingleResult());
+    }
+
+    public List<Item> findItemsByMemberId(Long memberId) {
+        return em.createQuery("select i from Item i where i.member.id = :memberId", Item.class)
+                .setParameter("memberId", memberId)
+                .getResultList();
+    }
 }

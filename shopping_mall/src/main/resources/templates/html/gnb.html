@@ -21,7 +21,7 @@
               </li>
               <li><a  href="/items/new">상품 등록</a></li>
               <li> <a  href="/items">상품 목록</a></li>
-              <li><a  href="/registItems">등록 관리</a></li>
+              <li><a  th:href="'/myItems/'+${session.id}">등록 관리</a></li>
             </ul>
             <ul>
               <li class="h5 mb-2 font-weight-bold text-primary title"><a href="/new/html/posting-apply-01.html">주문 기능</a>

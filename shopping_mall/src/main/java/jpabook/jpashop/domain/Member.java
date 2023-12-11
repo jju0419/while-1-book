@@ -21,6 +21,8 @@ public class Member {
     private String email;
     private String number;
 
+    private String roles;
+
     @Embedded //내장 타입 받는 경우 사용
     private Address address;
 

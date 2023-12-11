@@ -36,8 +36,8 @@
             <th></th>
           </tr>
           </thead>
-          <tbody>
-          <tr th:each="item : ${items}">
+          <tbody >
+          <tr th:each="item : ${items}" th:if="${session.userId} eq ${item.member.user_id}">
             <td th:text="${item.id}"></td>
             <td th:text="${item.name}"></td>
             <td th:text="${item.author}"></td>
@@ -47,7 +47,7 @@
             <td th:text="${item.uni}"></td>
 <!--            나중에 ID값 매핑해서 등록자만 수정가능하도록-->
             <td>
-              <a href="#" th:href="@{/items/{id}/edit (id=${item.id})}"
+              <a href="#" th:href="@{/items/{id} (id=${item.id})}"
                  class="btn btn-primary" role="button">수정</a>
             </td>
           </tr>
@@ -55,13 +55,6 @@
         </table>
 
 
-        <div id="row1" style="float:left;">
-          <form class="searchForm" th:action="@{/items}" th:object="${keyword}" method="get" >
-            <input type="text" name="title" class="formcontrol" th:value="${title}" placeholder="제목을 입력하세요">
-            <input type="text" name="uni" class="formcontrol" th:value="${uni}"  placeholder="학교를 입력하세요">
-            <button type="submit" class="btn btn-primary">검색</button>
-          </form>
-        </div>
 
       </div>
       <!-- Content End -->
